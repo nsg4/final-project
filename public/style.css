@@ -1,0 +1,44 @@
+/*styling applied to public pages.*/
+body{
+    font-family: Arial;
+    background:linear-gradient(rgb(6, 200, 230), rgb(105, 247, 105) );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:320px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgb(6, 200, 230);
+    color: black;
+    margin: 5px;
+}
+
+button:hover{
+    background:rgb(5, 152, 174);
+}
+
+a{
+    display:block;
+    margin-top:10px;
+}

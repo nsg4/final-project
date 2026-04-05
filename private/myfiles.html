@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Files</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:linear-gradient(rgb(6, 200, 230), rgb(105, 247, 105) );
+            margin: 0;
+            display:flex;
+            flex-direction: column;
+            height:100vh;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .container {
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        width:700px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+        text-align:center;
+        margin: auto;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            max-width: 700px;
+            font-size: 18px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        #userInput {
+            height: 15px;
+            width: 200px;
+            padding: 10px;
+            margin-bottom:10px;
+        }
+
+        #btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgb(105, 247, 105);
+            color: black;
+        }
+
+        
+        #btn:hover {
+            background: rgb(77, 181, 77);
+        }
+
+        #btn2 {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgb(6, 200, 230);
+            color: black;
+        }
+
+        #btn2:hover {
+            background: rgb(5, 152, 174);
+        }
+
+    </style>
+</head>
+<!--calls loadMyFiles function. Checks for token upon page load because myfiles is a protected route.-->
+<body onload="loadMyFiles()">
+    <header class="navbar">
+        <div class="logo">My Final Project</div>
+
+        <nav>
+            <a href="/upload">Upload Image</a>
+            <a href="/downloads">All Downloads</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>My Files</h2>
+       <!--calls loadMile function upon clicking load my files button.--> 
+        <button id="btn2" onclick="loadMine()">Load My Files</button>
+
+        <hr>
+        <ul id="myFileList"></ul>
+        <hr>
+        <!--calls logout function upon clicking logout button.--> 
+        <button id="btn" onclick="logout()">Log Out</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

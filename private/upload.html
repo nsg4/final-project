@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:linear-gradient(rgb(6, 200, 230), rgb(105, 247, 105) );
+            margin: 0;
+            display:flex;
+            flex-direction: column;
+            height:100vh;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .container {
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        width:400px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+        text-align:center;
+        margin: auto;
+        }
+
+        .container h1 {
+            margin-bottom: 30px;
+        }
+
+        #btn1 {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgb(6, 200, 230);
+            color: black;
+        }
+
+        #btn1:hover {
+            background: rgb(5, 152, 174);
+        }
+
+        #btn2 {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgb(105, 247, 105);
+            color: black;
+        }
+
+        
+        #btn2:hover {
+            background: rgb(77, 181, 77);
+        }
+
+        #owner {
+            height: 15px;
+            width: 200px;
+            padding: 10px;
+            margin-bottom:10px;
+        }
+
+        #filename {
+            height: 15px;
+            width: 200px;
+            padding: 10px;
+            margin-bottom:10px;
+        }
+
+        #file {
+            padding: 10px;
+            margin-bottom:20px;
+        }
+
+    </style>
+</head>
+<!--calls loadUpload function. Checks for token upon page load because upload is a protected route.-->
+<body onload="loadUpload()">
+    <header class="navbar">
+        <div class="logo">My Final Project</div>
+
+        <nav>
+            <a href="/downloads">All Downloads</a>
+            <a href="/myfiles">My Files</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Upload An Image</h1>
+
+        <form id="uploadForm">
+            <input type="text" id="owner" placeholder="Type your username here." required>
+            <br>
+            <input type="text" id="filename" placeholder="Name your file." required>
+            <br>
+            <input type="file" id="file" required>
+            <br>
+            <button type="submit" id="btn1">Upload</button>
+            <!--calls logout function upon clicking log out button.--> 
+            <button type="button" id="btn2" onclick="logout()">Log Out</button>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
